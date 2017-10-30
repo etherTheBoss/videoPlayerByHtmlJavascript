@@ -38,7 +38,7 @@
                 <source src="animation.ogg">
             </video>
             <div id="videoControlBar">
-                <button id="playPauseButton" onclick="playPause(this, 'myVideo')">pause</button>
+                <button id="playPauseButton">pause</button>
             </div>
         </div>
 
@@ -46,18 +46,32 @@
 
 
         <script>
-            function playPause(btn, vid){
 
-                var vid = document.getElementById(vid);
+            var vid, playBtn;
+
+
+            function initializePlayer()
+            {
+                vid = document.getElementById('myVideo');
+                playBtn = document.getElementById('playPauseButton');
+
+                playBtn.addEventListener('click', playPause, false);
+            }
+
+
+            window.onload = initializePlayer;
+            function playPause()
+            {
+
                 if(vid.paused)
                 {
                     vid.play();
-                    btn.innerHTML = 'pause';
+                    playBtn.innerHTML = 'pause';
                 }
                 else
                 {
                     vid.pause();
-                    btn.innerHTML = 'play';
+                    playBtn.innerHTML = 'play';
                 }
                 
             }
