@@ -6,7 +6,7 @@
  * User: Habib
  * Date: 10/18/2017
  * Time: 5:02 PM
- * SOURCE : YOUTUBE https://www.youtube.com/watch?v=V8_wEZD160g
+ * SOURCE : YOUTUBE https://www.youtube.com/watch?v=BuaIDNu_pPg
  */
 ?>
 <!DOCTYPE html>
@@ -15,6 +15,8 @@
         <title>Habib Video Player</title>
 
         <style>
+
+            <link rel="stylesheet" type="text/css" href="css/main-style.css" >
 
             div#videoControlBar
             {
@@ -51,6 +53,14 @@
                 float: right;
             }
 
+            video::-webkit-media-controls-enclosure
+            {
+                display:none !important;
+            }
+
+
+
+
         </style>
     </head>
 
@@ -61,9 +71,7 @@
                 <source src="animation.ogg">
             </video>
             <div id="videoControlBar">
-<!--                <span id="curentTimeText"></span> <span id="btwDandC">/</span> <span id="durentTimeText"></span><br>-->
                 <input id="seekSlider" type="range" min="0" max="100" value="0" step="1" style="width: 100%;" />
-
                 <button id="playPauseButton">pause</button>
                 <span id="curentTimeText"></span> <span id="btwDandC">/</span> <span id="durentTimeText"></span><br>
                 <button id="muteBtn">Mute</button>
@@ -149,11 +157,13 @@
                 {
                     vid.muted = false;
                     muteBtn.innerHTML = 'Mute';
+                    volumeSlider.value = 100;
                 }
                 else
                 {
                     vid.muted = true;
                     muteBtn.innerHTML = 'Unmute';
+                    volumeSlider.value = 0;
                 }
             }
 
