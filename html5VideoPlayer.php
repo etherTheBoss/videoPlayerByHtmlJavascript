@@ -164,12 +164,12 @@
                 if(vid.paused)
                 {
                     vid.play();
-                    playBtn.innerHTML = '<i style="font-size: .7em; float: left !important;" class="fa fa-pause" aria-hidden="true"></i>';
+                    playBtn.innerHTML = '<i style="font-size: .7em; float: left !important;!important; margin-left: 0.5% !important;" class="fa fa-pause" aria-hidden="true"></i>';
                 }
                 else
                 {
                     vid.pause();
-                    playBtn.innerHTML = '<i style="font-size: .7em; float: left !important;" class="fa fa-play" aria-hidden="true"></i>';
+                    playBtn.innerHTML = '<i style="font-size: .7em; float: left !important;!important; margin-left: 0.5% !important;" class="fa fa-play" aria-hidden="true"></i>';
                 }
                 
             }
