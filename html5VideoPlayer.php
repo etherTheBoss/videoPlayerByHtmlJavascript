@@ -79,7 +79,7 @@
 
                     <div align="center" style="background: rgba(43, 28, 11, 0.4); border: 1px solid #fdf7f7; height: 51px; padding: 2px;">
                         <span style="font-size: 10px; float: right !important;" id="curentTimeText"></span> <span style="font-size: 10px; float: right !important;" id="btwDandC">/</span> <span style="font-size: 10px; float: right !important;" id="durentTimeText"></span>
-                        <span id="playPauseButton"><i style=" font-size: .7em; float: left !important;" class="fa fa-pause" aria-hidden="true"></i></span>
+                        <span id="playPauseButton"><i style=" font-size: .7em; float: left !important; margin-left: 0.5% !important;" class="fa fa-pause" aria-hidden="true"></i></span>
                         <span style="float: right !important; margin-right: 2%; hight:2%;" id="fullScreen"><i style=" font-size: .6em;" class="fa fa-arrows-alt" aria-hidden="true"></i></span>
                         <br/>
 
